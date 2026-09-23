@@ -6,15 +6,16 @@ This project classifies motor sounds into **Diesel** and **Petrol** using **Audi
 
 The audio files are processed using Librosa to extract numerical audio features and generate **Mel Spectrograms**. The Mel Spectrogram images are then used to train a CNN model.
 
-> **Note:** This project uses a relatively small dataset, so the model's performance may not generalize well to a larger and more diverse dataset.
-
----
+> **Note:** This project uses a relatively small dataset, so the model's performance may not generalize well to larger and more diverse datasets.
 
 ## Dataset
 
 The dataset was obtained from Kaggle.
 
-**Dataset:** `alwaysashif/motor-sound-detect`
+**Kaggle Dataset:**
+[Motor Sound Detect Dataset on Kaggle](https://www.kaggle.com/datasets/alwaysashif/motor-sound-detect?utm_source=chatgpt.com)
+
+### Dataset Contents
 
 | Class              | Samples |
 | ------------------ | ------: |
@@ -22,11 +23,9 @@ The dataset was obtained from Kaggle.
 | Petrol Motor Sound |     137 |
 | **Total**          | **320** |
 
----
-
 ## Audio Feature Extraction
 
-Using **Librosa**, the following features were extracted:
+Audio features were extracted using **Librosa**:
 
 * Zero Crossing Rate (ZCR)
 * RMS Energy
@@ -37,9 +36,9 @@ Using **Librosa**, the following features were extracted:
 * Chroma Features
 * Mel Spectrogram
 
-The extracted numerical features were saved for analysis, while Mel Spectrograms were converted into **2D images** for CNN training.
+The numerical features were extracted for analysis, while Mel Spectrograms were converted into **2D images** for CNN training.
 
-### Workflow
+## Workflow
 
 ```text
 Audio Files
@@ -55,8 +54,6 @@ CNN
 Diesel / Petrol
 ```
 
----
-
 ## Data Preprocessing
 
 Mel Spectrogram images were:
@@ -70,18 +67,14 @@ Dataset split:
 * **10% Validation**
 * **10% Testing**
 
----
-
 ## Model
 
-A **Convolutional Neural Network (CNN)** was trained on the Mel Spectrogram images.
+A **Convolutional Neural Network (CNN)** was trained using the Mel Spectrogram images.
 
 * Optimizer: **Adam**
 * Loss: **Binary Crossentropy**
 * Output activation: **Sigmoid**
 * Metric: **Accuracy**
-
----
 
 ## Results
 
@@ -92,8 +85,6 @@ A **Convolutional Neural Network (CNN)** was trained on the Mel Spectrogram imag
 | Testing    | **84.38%** |
 
 The model was evaluated using **Accuracy, Classification Report, and Confusion Matrix**.
-
----
 
 ## Technologies
 
@@ -107,8 +98,8 @@ The model was evaluated using **Accuracy, Classification Report, and Confusion M
 * Scikit-learn
 * Kaggle
 
----
-
 ## Author
 
 **Ashif Ali**
+
+GitHub: [@always-ashif](https://github.com/always-ashif)
